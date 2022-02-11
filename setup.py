@@ -29,15 +29,15 @@ test_requirements = [
 
 
 setup(
-    name='pytestUkeyKJ',
-    description='Pure-Python pytestUkeyKJ',
+    name='pytestzz',
+    description='Pure-Python pytestzz',
     version='1.0.0',
     author='jzhang5202',
     author_email='yujuan99099@163.com',
     packages=find_packages(),
     include_package_data=True,
     long_description=README,
-    url='https://github.com/jzhang5202/pytestUkeyKJ',
+    url='git@github.com:jzhang5202/pytestzz.git',
     platforms='all platform',
     license='BSD',
 )
