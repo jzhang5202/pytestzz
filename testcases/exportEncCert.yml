@@ -1,0 +1,6 @@
+- name: 导入加密证书
+  request:
+    method: post
+    url: http://127.0.0.1:4433/SOF_ExportEncCert
+    params:
+      containerName: "dmsUK1"

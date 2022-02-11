@@ -1,0 +1,9 @@
+- name : 登录-正确的PIN码
+  request:
+    url: http://127.0.0.1:4433/SOF_Login
+    method: post
+    params:
+      passWd: 12345678
+
+  validate:
+     - eq: ["$.result", True]

@@ -1,0 +1,10 @@
+- name: encryptDataOK
+  request:
+    url: &url http://127.0.0.1:4433/SOF_EncryptData
+    method: post
+    params:
+      containerName: $containerName
+      base64EncodeCert: $base64EncodeCert
+      inData: dmstestaaaa
+
+

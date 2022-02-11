@@ -1,0 +1,7 @@
+- name: 重置用户PIN码
+  request:
+    method: post
+    url: http://127.0.0.1:4433/SOF_ResetPassWd
+    params:
+      szAdminPIN: 12345678
+      szNewUserPIN: 12345678

@@ -1,0 +1,18 @@
+#from common.yaml_util import write_yaml, read_yaml,read_testcase_yaml
+- name: verifySignedMessageBase64
+  request:
+    method: post
+    url: &verifySignedMessageURL http://127.0.0.1:4433/SOF_VerifySignedMessage
+    params:
+     messageData: $messageData
+     inData: ZG1zVGVzdGFhYWE=
+     type: base64
+
+- name: verifySignedMessagenoBase64
+  request:
+    method: post
+    url: *verifySignedMessageURL
+    params:
+     messageData: $messageData
+     inData: dmsTestaaaa
+     type: nobase64

@@ -1,0 +1,14 @@
+- name: 消息签名-base64
+  request:
+    method: post
+    url: &signMessageURL http://127.0.0.1:4433/SOF_SignMessage
+    inData: ZG1zVGVzdGFhYWE=
+    type: base64
+
+
+- name: 消息签名-nobase64
+  request:
+    method: post
+    url: *signMessageURL
+    inData: dmsTestaaaa
+    type: nobase64

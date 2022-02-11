@@ -1,0 +1,5 @@
+- name: 获取PIN重试次数
+  request:
+    method: post
+    url: http://127.0.0.1:4433/SOF_GetPinRetryCount
+

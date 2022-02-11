@@ -1,0 +1,21 @@
+- name: 数字签名-base64
+  request:
+    method: post
+    url: http://127.0.0.1:4433/SOF_SignData
+    params:
+      containerName: dmsUK1
+      inData: ZG1zVGVzdGFhYWE=
+      type: base64
+  extract:
+    signResult: $.request
+
+
+- name: 数字签名-nobase64
+  request:
+    method: post
+    url: http://127.0.0.1:4433/SOF_SignData
+    params:
+      containerName: dmsUK1
+      inData: dmsTestaaaa
+      type: nobase64
+

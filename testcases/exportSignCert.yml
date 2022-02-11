@@ -1,0 +1,11 @@
+- name: 导出签名证书
+  request:
+    method: post
+    params:
+      containerName: "dmsUK1"
+    url: http://127.0.0.1:4433/SOF_ExportSignCert
+
+  extract:
+    SignCertBase64: $.result
+
+  validate: None

@@ -1,0 +1,20 @@
+VISIONUPLOAD DEFINITIONS AUTOMATIC TAGS::= BEGIN
+
+-- Message from the platform
+EnvelopedData ::= SEQUENCE {
+   version        Version,
+   recipientInfos        RecipientInfos,
+   encryptedContentInfo     EncryptedContentInfo
+}
+
+RecipientInfos ::= SET OF RecipientInfo
+
+EncryptedContentInfo ::= SEQUENCE{
+    contentType ContentType,
+    contentEncryptionAlgorithm ContentEncryptionAlgorithmIdentifier,
+
+
+
+}
+
+END

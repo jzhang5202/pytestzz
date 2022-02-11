@@ -1,0 +1,7 @@
+- name: 修改PIN
+  request:
+    method: post
+    url: http://127.0.0.1:4433/SOF_ChangePassWd
+    params:
+      oldPassWd: 12345678
+      newPassWd: 12345678

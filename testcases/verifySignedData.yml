@@ -1,0 +1,26 @@
+#- name: Import extract.yml
+#  include_vars:
+#    file: ../extract.yml
+#    name: vardata
+
+- name: verifySignedDatabase64
+  request:
+    method: post
+    url: &verifyURL http://127.0.0.1:4433/SOF_VerifySignedData
+    params:
+      Base64EncodeCert: $Base64EncodeCert
+      inData: ZG1zVGVzdGFhYWE=
+      signValue: ${signValue}
+      type: base64
+
+
+- name: verifySignedDatanobase64
+  request:
+    method: post
+    url: *verifyURL
+    params:
+      Base64EncodeCert: $Base64EncodeCert
+      inData: dmsTestaaaa
+      signValue: ${signValue}
+      type: nobase64
+

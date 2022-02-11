@@ -1,0 +1,8 @@
+- name: 获取用户列表
+  request:
+    method: get
+    url: http://127.0.0.1:4433/SOF_GetUserList
+
+  validate: None
+
+
