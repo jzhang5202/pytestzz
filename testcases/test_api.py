@@ -229,7 +229,19 @@ class TestApi:
     @pytest.mark.parametrize('caseinfo',read_testcase_yaml('decryptData.yml'))
     def test_decryptData(self,caseinfo):
         url = caseinfo['request']['url']
-        print("1111")
+        method = caseinfo['request']['method']
+        data = {}
+        data['containerName'] = read_yaml('containerName')
+        data['encryptData'] = read_yaml('encryptData')
+        re = Template(str(caseinfo)).safe_substitute(data)
+        paramsInfo = yaml.safe_load(stream=re)
+
+        #发送请求
+        res = requests.request(method=method,url=url,params=paramsInfo['request']['params'])
+        print(res.text)
+
+
+
 
 
         

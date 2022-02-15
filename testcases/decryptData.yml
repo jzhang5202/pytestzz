@@ -1,0 +1,15 @@
+- name: decryptOK
+  request:
+    url: &url http://127.0.0.1:4433/SOF_DecryptData
+    method: post
+    params:
+      containerName: $containerName
+      inData: $encryptData
+
+- name: decryptERRget
+  request:
+    url: *url
+    method: get
+    params:
+      containerName: $containerName
+      inData: $encryptData

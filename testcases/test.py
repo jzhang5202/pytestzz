@@ -14,12 +14,12 @@ import asn1tools
 # #base64编码
 # baseData2=base64.b64encode(data2)
 # print(baseData2)
-
-with open("F:\\test\\pkm2","rb") as fp:
-    crt_data = fp.read()
-#base64编码
-readFilebase64=base64.b64encode(crt_data)
-print(readFilebase64)
+#
+# with open("F:\\test\\pkm2","rb") as fp:
+#     crt_data = fp.read()
+# #base64编码
+# readFilebase64=base64.b64encode(crt_data)
+# print(readFilebase64)
 
 
 #
@@ -61,8 +61,23 @@ print(readFilebase64)
 # print(certData.get_notAfter())
 
 
+#读取本地二进制文件
+# with open("F:\\test\\pkm2","rb") as fp:
+#     crt_data = fp.read()
+# fp.close()
+# wf= open("F:\\test\\pkmtttt","wb")
+# wf.write(crt_data)
+# wf.close()
 
+import binascii
 
+hex_str = "557365723a20746573740d0a50617373776f72643a206f7073313233210d0a"
+
+hex = hex_str.encode('utf-8')
+str_bin = binascii.unhexlify(hex)
+str = str_bin.decode('utf-8')
+
+print(str)
 
 
 
