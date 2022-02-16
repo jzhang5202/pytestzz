@@ -239,7 +239,7 @@ class TestApi:
         #发送请求
         res = requests.request(method=method,url=url,params=paramsInfo['request']['params'])
         print(res.text)
-        print("3333")
+        print("第六次提交")
 
 
 
