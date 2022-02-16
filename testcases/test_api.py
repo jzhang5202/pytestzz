@@ -239,6 +239,7 @@ class TestApi:
         #发送请求
         res = requests.request(method=method,url=url,params=paramsInfo['request']['params'])
         print(res.text)
+        print("22222")
 
 
 
